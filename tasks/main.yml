@@ -6,7 +6,7 @@
   shell: echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections
 
 - name: install java
-  apt: package=oracle-java{{ java_version }}-installer state=latest update_cache=true
+  apt: package=oracle-java{{ java_version }}-installer state=latest
 
 - name: set default java version
-  apt: package=oracle-java{{ java_version }}-set-default state=latest update_cache=true
+  apt: package=oracle-java{{ java_version }}-set-default state=latest
