@@ -1,0 +1,9 @@
+---
+- name: add weupd8team repo
+  apt_repository: repo='ppa:nginx/stable' state=present update_cache=true
+
+- name: install java
+  apt: package=oracle-java{{ java_version }}-installer state=latest update_cache=true
+
+- name: set default java version
+  apt: package=oracle-java{{ java_version }}-set-default state=latest update_cache=true
