@@ -1,7 +1,7 @@
 Role Name
 =========
 
-The role for install java 8 on ubuntu systeam
+The role for install java 8 on ubuntu system
 
 Role Variables
 --------------
@@ -14,6 +14,7 @@ Example Playbook
 
 
     - hosts: servers
+      sudo: yes
       vars:
         java_version: 8
       roles:
